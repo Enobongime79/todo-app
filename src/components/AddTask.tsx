@@ -5,7 +5,7 @@ function AddTask({ tasks, setTasks }: TaskProps) {
   const [task, setTask] = useState("");
 
   const addTask = () => {
-    const taskValue = { key: tasks.length, task: task }
+    const taskValue = { key: crypto.randomUUID(), task: task }
     setTasks([...tasks, taskValue]);
     setTask("");
   }

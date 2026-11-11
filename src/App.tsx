@@ -9,7 +9,7 @@ interface Task {
 }
 
 function App() {
-  const [tasks, setTasks] = useState<Task[]>([{key: 1, task: "Wash the dishes"}]);
+  const [tasks, setTasks] = useState<Task[]>([]);
   
   return (
     <div>

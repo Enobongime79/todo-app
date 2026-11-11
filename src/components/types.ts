@@ -1,5 +1,5 @@
 export interface Task {
-  key: number;
+  key: string;
   task: string;
 }
 

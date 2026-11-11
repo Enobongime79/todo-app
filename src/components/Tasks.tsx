@@ -7,9 +7,6 @@ function Tasks({ tasks, setTasks}: TaskProps) {
     const key = e.currentTarget.dataset.key;
     const filtered = tasks.filter(obj => obj.key != key);
     setTasks(filtered);
-    console.log(key);
-    console.log(tasks);
-    console.log(filtered);
   }
 
   return (
