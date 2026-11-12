@@ -2,14 +2,11 @@ import Navbar from "./components/Navbar";
 import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks";
 import { useState } from "react";
-
-interface Task {
-  key: number;
-  task: string;
-}
+import type { Task } from "./components/types";
 
 function App() {
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const initalTasks = JSON.parse(localStorage.getItem("tasks"));
+  const [tasks, setTasks] = useState<Task[]>(initalTasks);
   
   return (
     <div>
